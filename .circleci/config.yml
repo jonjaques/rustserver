@@ -1,0 +1,9 @@
+version: 2.1
+orbs:
+  docker: circleci/docker@1.0.1
+workflows:
+  build-docker-image-only:
+    jobs:
+      - docker/publish:
+          deploy: false
+          image: jaquers/rustserver
